@@ -15,7 +15,7 @@
     <Grid FlowDirection="RightToLeft">
         <Border BorderBrush="Black"
                 Margin="10" 
-                BorderThickness="1"/>
+                BorderThickness="0.7"/>
         <Grid Margin="30">
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">

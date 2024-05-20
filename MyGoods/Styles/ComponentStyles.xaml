@@ -12,4 +12,8 @@
         <Setter Property="Width" Value="320"/>
         <Setter Property="Height" Value="30"/>
     </Style>
+    <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="Width" Value="261"/>
+        <Setter Property="Height" Value="25"/>
+    </Style>
 </ResourceDictionary>

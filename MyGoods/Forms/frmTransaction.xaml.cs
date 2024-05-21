@@ -15,14 +15,16 @@ using System.Windows.Shapes;
 namespace MyGoods.Forms
 {
     /// <summary>
-    /// Interaction logic for frmStocks.xaml
+    /// Interaction logic for frmTransaction.xaml
     /// </summary>
-    public partial class frmStock : Window
+    public partial class frmTransaction : Window
     {
-        public frmStock()
+        public frmTransaction()
         {
             InitializeComponent();
         }
+
+
 
         private void DataView_CustomCellAppearance(object sender, DevExpress.Xpf.Grid.CustomCellAppearanceEventArgs e)
         {
@@ -32,6 +34,18 @@ namespace MyGoods.Forms
                 e.Handled = true;
             }
         }
+
+
+        private void DataView2_CustomCellAppearance(object sender, DevExpress.Xpf.Grid.CustomCellAppearanceEventArgs e)
+        {
+            if (e.RowSelectionState != DevExpress.Xpf.Grid.SelectionState.None)
+            {
+                e.Result = e.ConditionalValue;
+                e.Handled = true;
+            }
+        }
+
+
 
     }
 }

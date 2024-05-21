@@ -1,0 +1,139 @@
+﻿<Window x:Class="MyGoods.Forms.frmTransaction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:local="clr-namespace:MyGoods.Forms"
+        mc:Ignorable="d"
+        Title="frmTransaction" Height="700" Width="900">
+    <Grid FlowDirection="RightToLeft">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Border BorderBrush="Black"
+                    Margin="10" 
+                    BorderThickness="0.7"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Style="{StaticResource TextBlockStyle}" Text="نوع تراکنش:" Margin="10 10 7 10"/>
+                <ComboBox Style="{StaticResource ComboBoxStyle}"/>
+                <TextBlock Style="{StaticResource TextBlockStyle}" Text="تاریخ:" Margin="10"/>
+                <dxe:TextEdit Mask="d" MaskType="DateTime"
+                              MaskUseAsDisplayFormat="True"
+                              Width="160" Height="25"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <dxg:GridControl ShowBorder="False" x:Name="dgvProblem"
+                               AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True"
+                               HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                               FlowDirection="RightToLeft">
+                <dxg:GridControl.View>
+                    <dxg:TableView x:Name="DataView" 
+                                    ShowTotalSummary="True" 
+                                    AllowBestFit="True"
+                                    BestFitMode="AllRows" 
+                                    FadeSelectionOnLostFocus="True" 
+                                    ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                    ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                    ShowGroupedColumns="False" 
+                                    ShowGroupPanel="False"
+                                    VerticalScrollbarVisibility="Visible"
+                                    AutoWidth="True" 
+                                    FlowDirection="RightToLeft"
+                                    EnterMoveNextColumn="True" 
+                                    ScrollViewer.CanContentScroll="True"
+                                    ScrollViewer.IsDeferredScrollingEnabled="True"
+                                    NavigationStyle ="Cell" 
+                                    CompactPanelShowMode="CompactMode"
+                                    CustomCellAppearance="DataView_CustomCellAppearance"
+                                    AllowSorting="True">            
+                        <dxg:TableView.RowStyle>
+                            <Style TargetType="{x:Type dxg:RowControl}">
+                                <Style.Triggers>
+                                    <Trigger Property="dxg:GridViewBase.IsFocusedRow" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </dxg:TableView.RowStyle>
+                    </dxg:TableView>
+                </dxg:GridControl.View>
+            </dxg:GridControl>
+        </Grid>
+        
+        <Grid Grid.Row="2">
+            <dxg:GridControl ShowBorder="False" x:Name="dgvProblem2"
+                               AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True"
+                               HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                               FlowDirection="RightToLeft">
+                <dxg:GridControl.View>
+                    <dxg:TableView x:Name="DataView2" 
+                                    ShowTotalSummary="True" 
+                                    AllowBestFit="True"
+                                    BestFitMode="AllRows" 
+                                    FadeSelectionOnLostFocus="True" 
+                                    ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                    ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                    ShowGroupedColumns="False" 
+                                    ShowGroupPanel="False"
+                                    VerticalScrollbarVisibility="Visible"
+                                    AutoWidth="True" 
+                                    FlowDirection="RightToLeft"
+                                    EnterMoveNextColumn="True" 
+                                    ScrollViewer.CanContentScroll="True"
+                                    ScrollViewer.IsDeferredScrollingEnabled="True"
+                                    NavigationStyle ="Cell" 
+                                    CompactPanelShowMode="CompactMode"
+                                    CustomCellAppearance="DataView_CustomCellAppearance"
+                                    AllowSorting="True">        
+                        <dxg:TableView.RowStyle>
+                            <Style TargetType="{x:Type dxg:RowControl}">
+                                <Style.Triggers>
+                                    <Trigger Property="dxg:GridViewBase.IsFocusedRow" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </dxg:TableView.RowStyle>
+                    </dxg:TableView>
+                </dxg:GridControl.View>
+            </dxg:GridControl>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Border BorderBrush="Black"
+                    Margin="10" 
+                    BorderThickness="0.7"/>
+            <DockPanel Margin="10">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <TextBlock Text="نام کاربری:" Margin="10"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" IsReadOnly="True"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <TextBlock Text="مبلغ کل:" Margin="10 10 19 10"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" IsReadOnly="True"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource ButtonStyle}"
+                            Content="محاسبه سفارش" Width="100"
+                            Margin="10" Height="25"/>
+                    <Button Style="{StaticResource ButtonStyle}"
+                            Content="ثبت نهایی" Width="100"
+                            Margin="10" Height="25"/>
+                </StackPanel>
+            </DockPanel>
+        </Grid>
+        
+    </Grid>
+</Window>

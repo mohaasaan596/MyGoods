@@ -1,7 +1,7 @@
 ﻿<Application x:Class="MyGoods.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="Forms/frmGoods.xaml">
+             StartupUri="Forms/frmTransaction.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

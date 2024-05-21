@@ -1,4 +1,4 @@
-﻿<Window x:Class="MyGoods.Forms.frmStocks"
+﻿<Window x:Class="MyGoods.Forms.frmStock"
         xmlns:local="clr-namespace:MyGoods.Forms"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -9,7 +9,7 @@
         xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
         dx:ThemeManager.ThemeName="VS2019Blue"
         mc:Ignorable="d"
-        Title="لیست کارخانه ها" Height="450" Width="800" 
+        Title="موجودی انبار" Height="450" Width="800" 
         WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow"
         ResizeMode="NoResize">

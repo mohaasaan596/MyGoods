@@ -1,0 +1,27 @@
+﻿<Window x:Class="MyGoods.Forms.frmAddOrEditGoodsType"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    dx:ThemeManager.ThemeName="VS2019Blue"
+    xmlns:local="clr-namespace:MyGoods.Forms"
+    mc:Ignorable="d"
+    Height="95" Width="325"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="ToolWindow"
+    ResizeMode="NoResize">
+    <Grid FlowDirection="RightToLeft">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="نوع کالا:" Margin="10"/>
+                <TextBox Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>
+            <Button Style="{StaticResource ButtonStyle}"
+                     Content="ذخیره" Width="60"
+                     Margin="10" Height="25"/>
+        </StackPanel>
+    </Grid>
+</Window>

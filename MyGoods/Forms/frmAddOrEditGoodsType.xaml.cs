@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace MyGoods.Forms
 {
     /// <summary>
-    /// Interaction logic for frmStocks.xaml
+    /// Interaction logic for frmAddOrEditGoodsType.xaml
     /// </summary>
-    public partial class frmStocks : Window
+    public partial class frmAddOrEditGoodsType : Window
     {
-        public frmStocks()
+        public frmAddOrEditGoodsType()
         {
             InitializeComponent();
         }

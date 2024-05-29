@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGoods.Model.DTO
 {
-    public class TransactionDTO
+    public class Transaction
     {
         public int TransactionID { get; set; }
         public int TransactionType { get; set; }

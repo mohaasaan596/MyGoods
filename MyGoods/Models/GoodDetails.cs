@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGoods.Model.DTO
 {
-    public class GoodDetailsDTO
+    public class GoodDetails
     {
         public int GoodDetailsID { get; set; }
         public int ManufactureID { get; set; }

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyGoods.Model.DTO
 {
-    public class UserDTO
+    public class TransactionType
     {
-        public int UserID { get; set; }
-        public string UserName { get; set; }
-        public int Password { get; set; }
+        public int TransactionTypeID { get; set; }
+        public string TransactionTitle{ get; set; }
     }
 }

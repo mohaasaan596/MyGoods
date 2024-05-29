@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyGoods.Model.DTO
 {
-    public class GoodCurrentPriceDTO
+    public class Stock
     {
-        public int GoodCurrentPriceID { get; set; }
-        public int GoodCurrentPrice { get; set; }
+        public int StockID { get; set; }
+        public int NumberOfGood {  get; set; }
     }
 }
